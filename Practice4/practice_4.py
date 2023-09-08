@@ -1,12 +1,12 @@
-from Practice4.import_this import generate_race_data
+from Practice4.import_this import (generate_race_data, RaceInfo,)
 
 N = None
 
 
 def sort_racers(RACE_DATA: dict) -> dict:
-     sorted_racers: dict = {}
-     for value in RACE_DATA.values():
-        finished_place = value ["FinishedPlace"]
+    sorted_racers: dict = {}
+    for value in RACE_DATA.values():
+        finished_place = value["FinishedPlace"]
         sorted_racers[finished_place] = value
     return sorted_racers
 
@@ -34,6 +34,3 @@ if __name__ == '__main__':
     sorted_racers: dict = sort_racers(race_data)
     print_first_racer(sorted_racers)
     print_top3_racers(sorted_racers)
-
-
-
