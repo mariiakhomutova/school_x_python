@@ -1,4 +1,4 @@
-from Practice4.import_this import (generate_race_data, RaceInfo,)
+from import_this import (generate_race_data, RaceInfo,)
 
 N = None
 
@@ -11,21 +11,21 @@ def sort_racers(RACE_DATA: dict) -> dict:
     return sorted_racers
 
 
-def print_first_racer(sorted_racers: dict) -> str:
+def print_first_racer(sorted_racers: dict) -> None:
     winner: str = f"Выиграл - {sorted_racers[1]['RacerName']}!!!! Поздравляем!!!"
     print(winner + "\n" + "-" * len(winner))
 
 
-def print_top3_racers(sorted_racers: dict) -> str:
+def print_top3_racers(sorted_racers: dict) -> None:
     print("Первые 3 места:\n")
     for n in range(1, 4):
         value: dict = sorted_racers[n]
         print(f"Гонщик на {n} месте\n" +
-              f"\tИмя:{value['RacerName']}\n" +
-              f"\tКоманда:{value['RacerTeam']}\n" +
-              f"\tВремя:{value['FinishedTimeSeconds'] // 3600}:" +
+              f"\tИмя: {value['RacerName']}\n" +
+              f"\tКоманда: {value['RacerTeam']}\n" +
+              f"\tВремя: {value['FinishedTimeSeconds'] // 3600}:" +
               f"{value['FinishedTimeSeconds'] % 3600 // 60}:" +
-              f"{value['FinishedTimeSeconds'] % 60} (H:M:S) \n"
+              f"{value['FinishedTimeSeconds'] % 60} (H:M:S)\n"
               )
 
 
