@@ -1,4 +1,2 @@
 time = int(input())
-hours = time // 3600
-minutes = time % 3600 // 60
-print(f"{hours} час(а/ов) и {minutes} минут(а/ы)")
+print(f"{time // 3600} час(а/ов) и {time % 3600 // 60} минут(а/ы)")
