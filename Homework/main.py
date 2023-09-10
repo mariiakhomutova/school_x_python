@@ -22,11 +22,10 @@ def test_negative():
     assert nod(10.7, 355) == 0, "Testing not natural failed..."
 
 
-N = None
-
-
-def nod(a, b: int) -> None:
-
+def nod(a, b):
+    if not type(a) == int or not type(b) == int:
+        return 0
+    
     if a <= 0 or b <= 0:
         return 0
 
